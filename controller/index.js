@@ -31,7 +31,7 @@ route.get('/guestList', (req, res) => {
 route.put('/confirm/:id', (req, res) => {
     guest.confirmAttendance(req, res);
 });
-route.put('/guest', (req, res) => {
+route.put('/guest/:id', bodyParser.json(), (req, res) => {
     guest.updateGuest(req, res);
 });
 
